@@ -75,7 +75,7 @@ function SetUp() {
                     <Row className="pt-10">
                         <Col span={7} offset={5} className="pt-2"><b>YOUR MONTHLY BUDGET</b></Col>
                         <Col span={5}><InputComponent type="number" placeholder="Amount" width="400" value={formik.values.budget == 0 ? "" : formik.values.budget} onChange={formik.handleChange} id="budget" name="budget" /></Col>
-                        <Col span={5} className="text-xl pl-2 pt-1 text-white">₹</Col>
+                        <Col span={5} className="text-xl pl-2 pt-1">₹</Col>
                     </Row>
 
                     <Row className="pt-14">

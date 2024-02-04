@@ -18,7 +18,7 @@ import AlertComponent from "../components/alert";
 
 function SignUp() {
 
-    const [ token, loading ] = useAuth();
+    const [token, loading] = useAuth();
     const navigate = useNavigate();
     const dispatch: AppDispatch = useDispatch();
 
@@ -50,7 +50,7 @@ function SignUp() {
                     <Layout>
                         {error && <AlertComponent message={error} type="error" />}
                         <Row>
-                            <Col span={12} offset={8} className="pt-0 font-bold text-xl text-white">CREATE NEW ACCOUNT</Col>
+                            <Col span={12} offset={8} className="pt-0 font-serif font-bold text-xl">Create New Account</Col>
                         </Row>
 
                         <Row>
@@ -83,7 +83,7 @@ function SignUp() {
                         </Row>
                         <Row>
                             <Col span={8} offset={9} className="pt-5 pl-4">
-                                <a href="/signin" className="text-white hover:text-blue-300">Already Have An Account?</a>
+                                <a href="/signin" className="text-black hover:text-blue-600 font-serif">Already Have An Account?</a>
                             </Col>
                         </Row>
                     </Layout>

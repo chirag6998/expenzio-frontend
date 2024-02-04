@@ -8,7 +8,7 @@ function CardComponent({ data, title }: { data: any[], title: string}) {
     let renderedData = data.map((item: any) => <p key={item.tag}>{item.tag} - {item.amount}</p>)
     return (
         <Space direction="vertical" size={16}>
-            <Card title={title} extra={button} style={{ width: 300 }}>
+            <Card title={title} extra={button} style={{ width: 300, fontFamily: "" }}>
                 {renderedData}
             </Card>
         </Space>

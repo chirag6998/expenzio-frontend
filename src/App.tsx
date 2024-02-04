@@ -41,7 +41,7 @@ function App() {
     <BrowserRouter>
       <div style={{ position: "absolute", top: 10, right: 10 }}> {/* Adjust the margin as needed */}
         <img src={logoImage} alt="Logo" className="h-16 w-35" style={{
-          boxShadow: '0 4px 8px rgba(0, 0, 0, 1)',
+          boxShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)',
           transform: 'rotateX(10deg) rotateY(0deg)'
         }} />
       </div>
