@@ -51,21 +51,20 @@ function ManageExpenses() {
     if (expenses && expenses.length > 0) {
         dateExpensesMap = getDateExpensesMap(expenses);
         for (let [date, tagAndAmount] of dateExpensesMap) {
-            console.log(date, tagAndAmount);
-            renderCards.push(<Row key={date}><Col offset={2} className="pt-5"><CardComponent title={date} data={tagAndAmount} /></Col></Row>)
+            renderCards.push(<Row key={date}><Col offset={2} className="pt-5 font-serif"><CardComponent title={date} data={tagAndAmount} /></Col></Row>)
         }
     }
 
     return (
         <Layout>
-            <Row><Col offset={10} className="pb-3"><b>SELECT DATE RANGE</b></Col></Row>
+            <Row><Col offset={10} className="pb-3 font-serif"><b>SELECT DATE RANGE</b></Col></Row>
             <Row>
                 <Col offset={3}><DatePickerComponent dates={dates} setDates={setDates} /></Col>
                 <Col offset={1}><InputComponent type="string" placeholder="Tag" width="400" value={tag} onChange={(event: React.ChangeEvent<HTMLInputElement>) => handleChange(event)} id="tag" name="tag" /></Col>
                 <Col offset={1}><ButtonComponent type="primary" size="small" onClick={handleFind}>FIND</ButtonComponent></Col>
             </Row>
             <Row>
-                <Col offset={3} className="pt-10"><b>TOTAL - {totalAmount}</b></Col>
+                <Col offset={3} className="pt-10 font-serif"><b>TOTAL - {totalAmount}</b></Col>
             </Row>
             {renderCards}
         </Layout>

@@ -46,7 +46,7 @@ function SignIn() {
                 <Layout>
                     {error && <AlertComponent message={error} type="error" />}
                     <Row>
-                        <Col span={12} offset={10} className="pt-0 font-bold text-xl text-white pl-5">SIGN IN</Col>
+                        <Col span={12} offset={10} className="pt-0 font-serif font-bold text-xl pl-5">Sign In</Col>
                     </Row>
                     <Row>
                         <Col span={8} offset={8} className="pt-6"><InputComponent type="text" placeholder="Username" width="400" value={formik.values.userName} onChange={formik.handleChange} id="userName" name="userName" onBlur={formik.handleBlur} /></Col>
@@ -61,7 +61,7 @@ function SignIn() {
                     </Row>
                     <Row>
                         <Col span={10} offset={9} className="pt-5">
-                            <a href="/" className="text-white hover:text-blue-300">New User? Create New Account</a>
+                            <a href="/" className="text-black hover:text-blue-600 font-serif">New User? Create New Account</a>
                         </Col>
                     </Row>
                 </Layout>

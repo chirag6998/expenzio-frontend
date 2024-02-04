@@ -27,13 +27,13 @@ function EditBudget() {
             <form onSubmit={formik.handleSubmit}>
                 <Layout>
                     <Row>
-                        <Col span={8} offset={9} className="pt-6 pl-5"><b>Enter Your New Budget</b></Col>
+                        <Col span={8} offset={9} className="pt-6 pl-5 font-serif"><b>Enter Your New Budget</b></Col>
                     </Row>
                     <Row>
                         <Col span={8} offset={8} className="pt-6"><InputComponent type="number" placeholder="Budget" width="400" value={formik.values.budget == 0 ? "" : formik.values.budget} onChange={formik.handleChange} id="budget" name="budget" /></Col>
                     </Row>
                     <Row>
-                        <Col span={8} offset={10} className="pt-6"><ButtonComponent type="primary" size="small" htmlType="submit">Update Budget</ButtonComponent></Col>
+                        <Col span={8} offset={11} className="pt-6"><ButtonComponent type="primary" size="small" htmlType="submit">Update</ButtonComponent></Col>
                     </Row>
                 </Layout>
             </form>

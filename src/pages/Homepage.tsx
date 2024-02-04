@@ -99,13 +99,13 @@ function Homepage() {
 
     let renderedMonthlyExpenses = (
         <>
-            <Col span={6} offset={8} className="pt-1">SHOW MONTHLY EXPENSES</Col>
+            <Col span={7} offset={7} className="pt-1 font-serif">SHOW MONTHLY EXPENSES</Col>
             <Col span={10}><SwitchComponent onChange={onSwitch} /></Col>
         </>
     )
 
     if (Array.isArray(monthlyExpenses) && monthlyExpenses.length == 0) {
-        renderedMonthlyExpenses = <Col span={8} offset={8} className="pt-1">MONTHLY EXPENSES ARE UPDATED!!</Col>
+        renderedMonthlyExpenses = <Col span={8} offset={8} className="pt-1 font-serif">MONTHLY EXPENSES ARE UPDATED!!</Col>
     }
 
     return (
@@ -113,14 +113,14 @@ function Homepage() {
             <Layout>
                 {error && <AlertComponent message={error} type="error" />}
                 <Row className="pt-10">
-                    <Col span={8} offset={2}>Budget: <b>{budget}₹</b></Col>
-                    <Col span={6} offset={8}>Spent: <b>{totalAmount}₹</b></Col>
+                    <Col span={8} offset={2} className="font-serif">Budget: <b>{budget}₹</b></Col>
+                    <Col span={6} offset={8} className="font-serif">Spent: <b>{totalAmount}₹</b></Col>
                 </Row>
                 <Row>
-                    <Col span={22} offset={2} className="pt-20"><b>{moment().format("DD MMMM")}</b></Col>
+                    <Col span={22} offset={2} className="pt-20 font-serif"><b>{moment().format("DD MMMM")}</b></Col>
                 </Row>
                 <Row>
-                    <Col span={10} offset={8} className="pt-10">{dailyRenderedTags.length == 0 ? "DAILY EXPENSES ARE UPDATED!!" : "UPDATE YOUR TODAY'S EXPENSES"}</Col>
+                    <Col span={10} offset={8} className="pt-10 font-serif">{dailyRenderedTags.length == 0 ? "DAILY EXPENSES ARE UPDATED!!" : "UPDATE YOUR TODAY'S EXPENSES"}</Col>
                 </Row>
                 {dailyRenderedTags}
                 <Row className="pt-20">
